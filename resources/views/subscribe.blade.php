@@ -16,14 +16,14 @@
                             <div>
                                 <input type="text" id="cardholder-name" class="px-2 py-2 border">
                             </div>
-
                             <div class="mt-4">
-                                <input type="radio" name="plan" id="standard" value="price_1HmXIkHcC5z5MAw3pfNKs65q" checked>
-                                <label for="standard">Standard - $10 / month</label> <br>
+                                <input type="radio" name="plan" id="standard" value="price_1Izg0lEec3qTGyD3PLrBSzSH" checked>
+                                <label for="standard">Trading Tools - $94 / MONTH</label> <br>
 
-                                <input type="radio" name="plan" id="premium" value="price_1HmXIkHcC5z5MAw3DZfIg9IZ">
-                                <label for="premium">Premium - $20 / month</label>
+                                {{--<input type="radio" name="plan" id="premium" value="price_1HmXIkHcC5z5MAw3DZfIg9IZ">
+                                <label for="premium">Premium - $20 / month</label>--}}
                             </div>
+                            <br/>
                             <label for="card-element">
                                 Credit or debit card
                             </label>
@@ -48,7 +48,7 @@
 
         <script>
             // Create a Stripe client.
-            var stripe = Stripe('pk_test_zmKNlnptONWFeIFjx9V6Ft2s');
+            var stripe = Stripe('pk_test_nygB5YLlsShlBZAslwqGNd7300rlbuGnZc');
 
             // Create an instance of Elements.
             var elements = stripe.elements();

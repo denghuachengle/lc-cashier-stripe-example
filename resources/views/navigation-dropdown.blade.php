@@ -25,6 +25,11 @@
                         Members
                     </x-jet-nav-link>
                     @endif
+                    @if (auth()->user()->subscribed('cashier'))
+                        <x-jet-nav-link href="{{ route('members_resume') }}" :active="request()->routeIs('members_resume')">
+                            Members Resume
+                        </x-jet-nav-link>
+                    @endif
                     <x-jet-nav-link href="{{ route('charge') }}" :active="request()->routeIs('charge')">
                         Charge
                     </x-jet-nav-link>

@@ -10,18 +10,17 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="p-6">Members Only</div>
 
+                <div class="p-6"><label>Trial Ends At: </label>{{ $details['trial_ends_at'] }}</div>
+                <div class="p-6"><label>Ends At: </label>{{ $details['ends_at'] }}</div>
+
                 <div class="p-6">
-                    <form action="{{ route('members.post') }}" method="post" id="cancel-form">
+                    <form action="{{ route('members_resume.post') }}" method="post" id="resume-form">
                         @csrf
                         <x-jet-button class="mt-4">
-                            Cancel Subscribe Now
+                            Resume Subscribe Now
                         </x-jet-button>
                     </form>
                 </div>
-
-
-                <div class="p-6"><label>Trial Ends At: </label>{{ $details['trial_ends_at'] }}</div>
-                <div class="p-6"><label>Ends At: </label>{{ $details['ends_at'] }}</div>
 
 
             </div>
@@ -32,13 +31,13 @@
         <script src="https://js.stripe.com/v3/"></script>
 
         <script>
-            // Create a Stripe client.
-            var form = document.getElementById('cancel-form');
-            form.addEventListener('submit', async function(event) {
+
+            var form2 = document.getElementById('resume-form');
+            form2.addEventListener('submit', async function(event) {
                 event.preventDefault();
-                var form = document.getElementById('cancel-form');
+                var form2 = document.getElementById('resume-form');
                 // Submit the form
-                form.submit();
+                form2.submit();
             });
 
 
